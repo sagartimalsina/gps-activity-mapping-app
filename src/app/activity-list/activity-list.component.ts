@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IActivity} from '../shared/activity.model';
-import {ActivityService} from '../services/activity.service';
+import { IActivity } from '../shared/activity.model';
+import { ActivityService } from '../services/activity.service';
 
 @Component({
   selector: 'app-activity-list',
@@ -13,8 +13,8 @@ export class ActivityListComponent implements OnInit {
   totalActivities: number;
   totalDistance: number;
   firstDate: Date;
-  constructor(private _activityService: ActivityService ) { }
 
+  constructor(private _activityService: ActivityService) { }
 
   ngOnInit() {
     this.activities = this._activityService.getActivities();
