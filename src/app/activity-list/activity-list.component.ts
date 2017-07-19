@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {IActivity} from '../shared/activity.model';
+import {ActivityService} from '../services/activity.service';
 
 @Component({
   selector: 'app-activity-list',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityListComponent implements OnInit {
 
-  constructor() { }
+  activities: IActivity[];
+  constructor(private _activityService: ActivityService ) { }
+
 
   ngOnInit() {
   }
