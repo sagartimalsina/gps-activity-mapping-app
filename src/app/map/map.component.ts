@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, AfterViewInit  {
   activity: any;
   activityName: string;
   activityComments: string;
@@ -32,4 +32,5 @@ export class MapComponent implements OnInit {
     this.activityDate = this.activity.date;
     this.gpx = this.activity.gpxData;
   }
+  /**Implement lifecycle hook interface AfterViewInit for method ngAfterViewInit in class Map Component(use-life cylce interface**/
 }
